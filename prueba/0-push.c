@@ -40,4 +40,4 @@ void push_file(stack_t **stack, unsigned int line_number)
 	*stack = real_push(stack, integer_a);
 	if (tokens[3])
 		free(tokens[3]);
-} 
+}

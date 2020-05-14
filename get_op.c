@@ -20,6 +20,7 @@ void get_op(stack_t **stack, unsigned int line_number)
 				{"add", add},
 				{"sub", sub},
 				{"div", div_f},
+				{"mul", mul_f},
 				{NULL, NULL}
 	};
 	for (count = 0; op_codes[count].opcode != NULL; count++)

@@ -1,4 +1,10 @@
 #include "monty.h"
+ /**
+ * main - function main
+ * @argc: argument counter
+ * @argv: argument vector
+ * Return: exit success or exit failed
+ */
 
 var_global items = {NULL, NULL, NULL, NULL, NULL};
 
@@ -27,7 +33,11 @@ int main(int argc, char *argv[])
 		res_get = getline(&items.line, &len, items.monty_file);
 		if (res_get == -1)
 			break;
+		if (!items.line || items.line[0] == '\n')
+			continue;
 		items.op_code = strtok(items.line, " \n\t");
+		if (!items.op_code || items.op_code[0] == '#')
+			continue;
 		items.arguments = strtok(NULL, " \n\t"); /* strtok for argument (number)*/
 		get_op(&stack, line_number);
 		line_number++;

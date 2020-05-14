@@ -1,11 +1,9 @@
 #include "monty.h"
-
 /**
-* add_dnodeint_end - add node in an linked list
-* @head: double pointer to linked list
-* @n: number
-*
-* Return: NUll or *head
+* push - add node to stack
+* @stack: double pointer to linked list
+* @line_number:line of file
+* Return:void
 */
 void push(stack_t **stack, unsigned int line_number)
 {
@@ -18,7 +16,7 @@ void push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	if (*items.arguments != '0' && _isdigit(items.arguments) &&
-	    items.arguments[0] != '-')
+	items.arguments[0] != '-')
 	{
 		dprintf(STDOUT_FILENO, "L%u: usage: push integer\n", line_number);
 		free_stack(stack);
@@ -39,7 +37,11 @@ void push(stack_t **stack, unsigned int line_number)
 		(*stack)->prev = new;
 	*stack = new;
 }
-
+/**
+* _isdigit - verificate if a string contains a digit
+* @arguments:items.argumnets
+* Return:a integer
+*/
 int _isdigit(char *arguments)
 {
 	int count;
@@ -51,9 +53,15 @@ int _isdigit(char *arguments)
 	}
 	return (0);
 }
+/**
+* nop - does nothing
+* @stack: double pointer to linked list
+* @line_number:line of file
+* Return:void
+*/
 
 void nop(stack_t **stack, unsigned int line_number)
 {
-	(void)stack;
-	(void)line_number; 
+	(void) stack;
+	(void) line_number;
 }

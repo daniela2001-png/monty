@@ -1,10 +1,9 @@
 #include "monty.h"
-
 /**
- * print_dlistint - print elements in an linked lists
- * @h: list
- *
- * Return: numbers of elements
+ * pall - print all
+ * @stack:list reversed
+ * @line_number: line of file
+ * Return:void
  */
 void pall(stack_t **stack, unsigned int line_number)
 {

@@ -11,21 +11,21 @@ void push(stack_t **stack, unsigned int line_number)
 
 	if (items.arguments == NULL)
 	{
-		dprintf(STDOUT_FILENO, "L%u: usage: push integer\n", line_number);
+		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	if (*items.arguments != '0' && _isdigit(items.arguments) &&
 	items.arguments[0] != '-')
 	{
-		dprintf(STDOUT_FILENO, "L%u: usage: push integer\n", line_number);
+		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));
 	if (!new)
 	{
-		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		free_stack(stack);
 		free(new);
 		exit(EXIT_FAILURE);

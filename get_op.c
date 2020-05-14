@@ -26,7 +26,7 @@ void get_op(stack_t **stack, unsigned int line_number)
 			return;
 		}
 	}
-	dprintf(STDOUT_FILENO, "L%u: unknown instruction %s\n",
+	dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n",
 	line_number, items.op_code);
 	free_stack(stack);
 	exit(EXIT_FAILURE);

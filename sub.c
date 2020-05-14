@@ -35,10 +35,10 @@ void sub(stack_t **stack, unsigned int line_number)
  * @line_number: line of file
  * Return:
  */
-void div(stack_t **stack, unsigned int line_number)
+void div_f(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
-	int sum, count = 0;
+	int sum, count = 0, n;
 
 	if ((*stack)->n == 0)
 	{
@@ -59,7 +59,8 @@ void div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	sum = (*stack)->next->n;
-	sum -= (*stack)->n;
+	n = (*stack)->n;
+	sum = sum / n;
 	pop_f(stack, line_number);
 	(*stack)->n = sum;
 }

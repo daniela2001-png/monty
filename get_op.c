@@ -19,6 +19,7 @@ void get_op(stack_t **stack, unsigned int line_number)
 				{"swap", swap},
 				{"add", add},
 				{"sub", sub},
+				{"div", div},
 				{NULL, NULL}
 	};
 	for (count = 0; op_codes[count].opcode != NULL; count++)

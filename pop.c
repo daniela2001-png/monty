@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * pop_f - function that deletes a node
- * @stack: double list reversed
+ * @head: double list reversed
  * @line_number: line of file
  * Return:
  */

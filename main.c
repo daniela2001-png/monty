@@ -1,13 +1,13 @@
 #include "monty.h"
- /**
+
+var_global items = {NULL, NULL, NULL, NULL, NULL};
+
+/**
  * main - function main
  * @argc: argument counter
  * @argv: argument vector
  * Return: exit success or exit failed
  */
-
-var_global items = {NULL, NULL, NULL, NULL, NULL};
-
 int main(int argc, char *argv[])
 {
 	size_t len = 0;

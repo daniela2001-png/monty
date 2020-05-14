@@ -15,7 +15,7 @@
 Monty 0.98 is a scripting language that is first compiled into monty byte codes (**just like python**). it relies on a unique stack, with specific instructions to manipulate it.
 - **Monty byte code files:** Files containing Monty byte codes usually have the **.m** extension. Most of the industry uses this standard but it is not required by the specification of the language. 
 
-- **Note:** There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument**:**
+- **Note:** There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument **:**
 
 ------------
     julien@ubuntu:~/monty$ cat -e bytecodes/000.m
@@ -33,7 +33,6 @@ Monty 0.98 is a scripting language that is first compiled into monty byte codes 
 
 
 
-------------
 
 ------------
 # Mandatory Tasks:
@@ -116,6 +115,7 @@ Queue has variants like circular queue, priority queue, doubly ended queue,    e
 ------------
 
 **Daniela Morales  | 1524@holbertonschool.com**
+
 **Zoltan Mora| 1558@holbertonschool.com**
 
 ------------

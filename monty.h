@@ -71,5 +71,6 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 void div_f(stack_t **stack, unsigned int line_number);
+void mul_f(stack_t **stack, unsigned int line_number);
 
 #endif

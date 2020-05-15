@@ -60,3 +60,30 @@ void free_stack(stack_t **stack)
 	free(items.line);
 	fclose(items.monty_file);
 }
+/**
+ * pstr_f - function that free a stack
+ * @stack: double list reversed
+ * @line_number:lineaaa
+ * Return:void
+ */
+
+void pstr_f(stack_t **stack, unsigned int line_number)
+{
+
+	stack_t *temp = *stack;
+	int c;
+	(void) line_number;
+
+	while (temp)
+	{
+		c = temp->n;
+		if (!isascii(c) || c == 0)
+			break;
+		putchar(c);
+		temp = temp->next;
+
+		if (*stack == temp)
+			break;
+	}
+	putchar('\n');
+}

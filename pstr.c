@@ -31,9 +31,9 @@ void pstr_f(stack_t **stack, unsigned int line_number)
 		printf("%c", temp->n);
 		if (temp->n < 0 || temp->n > 255 || temp->n == 0)
 		{
-			putchar('\n');
-			return;
+			break;
 		}
 		temp = temp->next;
 	}
+	putchar('\n');
 }

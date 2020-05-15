@@ -96,7 +96,7 @@ void mul_f(stack_t **stack, unsigned int line_number)
 
 /**
 * module - function that put the module
-* @head: double list reversed
+* @stack: double list reversed
 * @line_number: line of file
 * Return:
 */

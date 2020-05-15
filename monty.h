@@ -73,5 +73,6 @@ void sub(stack_t **stack, unsigned int line_number);
 void div_f(stack_t **stack, unsigned int line_number);
 void mul_f(stack_t **stack, unsigned int line_number);
 void module(stack_t **stack, unsigned int line_number);
+void pchar_f(stack_t **stack, unsigned int line_number);
 
 #endif
